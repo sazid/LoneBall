@@ -26,17 +26,17 @@ public class MenuState extends State {
 
 	@Override
 	public void onClick(MouseEvent e) {
-		System.out.println("onClick: " + e);
+		setCurrentState(new PlayState());
 	}
 
 	@Override
 	public void onKeyPress(KeyEvent e) {
-		System.out.println("onKeyPress: " + e);
+		
 	}
 
 	@Override
 	public void onKeyRelease(KeyEvent e) {
-		System.out.println("onKeyRelease: " + e);
+		
 	}
 
 }

@@ -36,8 +36,8 @@ public class Game extends JPanel implements Runnable {
 	
 	public void setCurrentState(State newState) {
 		System.gc();
-		currentState = newState;
 		newState.init();
+		currentState = newState;
 		inputHandler.setCurrentState(newState);
 	}
 	
@@ -59,7 +59,7 @@ public class Game extends JPanel implements Runnable {
 	public void run() {
 		while (running) {
 			currentState.update();
-			// use double-buffering to avoid tear and flickers
+			// use double-buffering to avoid tear and flicker
 			prepareGameImage();
 			currentState.render(gameImage.getGraphics());
 			repaint();
